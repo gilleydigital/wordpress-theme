@@ -148,8 +148,13 @@ h2 {
 }
 h3 {
   padding-left: 1px;
-  margin-top: -0.8em;
   font-size: 0.8em;
+}
+h1 + h3 {
+  margin-top: -2em;
+}
+h2 + h3 {
+  margin-top: -0.8em;
 }
 p.button a {
   display: inline-block;
