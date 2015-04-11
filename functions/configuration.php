@@ -9,8 +9,6 @@
 	}
 
 	/*** Actions ***/
-
-
 	function action_after_setup_theme(){
 		// Theme features
 		add_theme_support('post-thumbnails');
@@ -66,4 +64,33 @@
 		wp_enqueue_script('theme-script');
 	}
 	add_action('wp_enqueue_scripts', 'action_wp_enqueue_scripts');
+	
+	// Formats menu
+	function my_mce_before_init_insert_formats( $init_array ) {  
+		$style_formats = array(  
+			array(  
+				'title' => 'Big Header',  
+				'block' => 'h1'
+			),
+			array(  
+				'title' => 'Header',  
+				'block' => 'h2'
+			),
+			array(
+				'title' => 'Paragraph',
+				'block' => 'p'
+			),
+			array(
+				'title' => 'Button',
+				'block' => 'p',
+				'classes' => 'button'
+			),
+			
+		);  
+
+		$init_array['style_formats'] = json_encode( $style_formats );  
+	
+		return $init_array;
+	}
+	add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 ?>
