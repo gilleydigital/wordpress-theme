@@ -1016,7 +1016,6 @@ th {
   overflow: hidden;
   float: left;
   text-decoration: none;
-  /* Rounded */
 }
 .social .menu a[href*='facebook']:before {
   font-family: "Mono Social Icons Font";

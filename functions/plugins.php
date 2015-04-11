@@ -75,11 +75,6 @@ function my_theme_register_required_plugins() {
 			'required' => true
 		),
 		array(
-			'name' => 'TinyMCE Professional Styles',
-			'slug' => 'tinymce-and-tinymce-advanced-professsional-formats-and-styles',
-			'required' => true
-		),
-		array(
 			'name' => 'Gravity Forms',
 			'slug' => 'gravityforms',
 			'source' => $plugins_folder . '/gravityforms.zip',
