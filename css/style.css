@@ -1557,12 +1557,6 @@ img {
   padding-bottom: 8px;
 }
 /* Social */
-.social {
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-}
 .social .menu a {
   width: 1.1em;
   height: 1.1em;
