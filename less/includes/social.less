@@ -1,0 +1,102 @@
+/* Wiring */
+@icontypeplus: @icontype + 1;
+
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.social .menu a, .social .menu a:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.social .menu a:before {
+    margin-right: 0.5em;
+}
+
+.social .menu a {
+	overflow: hidden;
+	float: left;
+	text-decoration: none;
+	
+	/* Rounded */
+	&[href*='facebook'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}27";
+		}
+	}
+
+	&[href*='twitter'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}86";
+		}
+	}
+
+	&[href*='youtube'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}99";
+		}
+	}
+
+	&[href*='vimeo'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}89";
+		}
+	}
+	
+	&[href*='pinterest'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}64";
+		}
+	}
+	
+	&[href*='linkedin'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}52";
+		}
+	}
+
+	&[href*='instagram'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontypeplus}00";
+		}
+	}
+
+	&[href*='google'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}39";
+		}
+	}
+	
+	&[href*='mailto'] {
+		&:before {
+			font-family: "Mono Social Icons Font";
+			content: "\e@{icontype}24";
+		}
+	}
+}

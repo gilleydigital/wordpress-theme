@@ -1,0 +1,183 @@
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	color: @c1;
+	
+	&:first-child {
+		margin-top: 0;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1em;
+	line-height: 1.8;
+	font-size: 1em;
+	color: @dark;
+	
+	&:first-child {
+		margin-top: 0;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	text-decoration: underline;
+	color: @c1;
+	
+	&:hover {
+		color: @c2;
+	}
+}
+
+h1 {
+	font-size: 2.618em;
+}
+
+h2 {
+	font-size: 1.618em;
+}
+
+h3 {
+	padding-left: 1px;
+	margin-top: -0.8em;
+	font-size: 0.8em;
+}
+
+p.button {
+	a {
+		.button-style;
+	}
+}
+
+ul, ol {
+	padding: 0;
+	margin: 1em 0 1em 40px;
+	
+	li {
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+}
+
+ul {
+	li {
+		list-style-type: disc;		
+	}
+}
+
+h1, h2, h3, h4, h5, h6, a {
+	&::selection {
+		background: fade(@c2, 60);
+	}
+	
+	&::-moz-selection {
+		background: fade(@c2, 60);
+	}
+}
+
+p, ul, ol, blockquote, table, p.button a {
+	&::selection {
+		background: fade(@c1, 60);
+	}
+
+	&::-moz-selection {
+		background: fade(@c1, 60);
+	}	
+}
+
+/* Images */
+.alignright, .alignleft, .aligncenter, .alignnone {
+	margin-bottom: 1em;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 2%;
+}
+
+.alignright {
+	float: right;
+	margin-left: 2%;
+}
+
+.wp-caption-text {
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-top: .2em;
+	color: @darkgrey;
+	font-size: 0.8em;
+	line-height: 1.2;
+}
+
+/* Block Quotes */
+blockquote {
+	background: @lightgrey;
+	border-left: 10px solid @darkgrey;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+	content: open-quote;
+	color: @darkgrey;
+	font-size: 4em;
+	line-height: 0.1em;
+}
+
+blockquote p {
+	display: inline;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	
+	tr:nth-child(even) {
+		background: @lightgrey;
+	}
+	
+	tr:nth-child(odd) {
+		background: @darkgrey;
+	}
+	
+	// Top row, and left-most column
+	tr:first-child, tr td:first-child {
+		background: @c1;
+		color: @light;
+	}
+	
+	td {
+		border: 1px solid @dark;
+		padding: 5px 10px;
+	}	
+}
+
+/* Gravity Forms */
+.gform_wrapper {
+	.gfield {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+	
+	.gfield_label {
+		color: @dark;
+		.sans;
+	}
+	
+	.gform_footer input.button, input[type=submit] {
+		.button-style;
+	}
+}

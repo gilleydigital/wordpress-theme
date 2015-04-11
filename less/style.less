@@ -1,0 +1,214 @@
+@import "includes/lib/normalize.less";
+
+@import "includes/lib/grid.less";
+
+@import "settings.less";
+
+@import "includes/social.less";
+
+@import "includes/starter.less";
+
+@import "includes/mobile.less";
+
+/* Header */
+.header {
+	background: @c1;
+	padding: 15px 0;
+	color: @light;
+	
+	a {
+		color: @light;
+		
+		&:hover {
+			color: @c2;
+		}
+	}
+	
+	.logo {
+		float: left;
+	}
+}
+
+.primary {
+	margin-top: 42px;
+	
+	.menu {
+		& > li {
+			margin-left: 15px;
+			
+			a {
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+		}
+		
+		.sub-menu, .children {
+			background: @c1;
+			margin-left: -8px;
+			border-color: @dark;
+			border-width: 1px;
+			border-style: solid;
+			
+			li {
+				border-bottom: 1px solid @dark;
+				
+				&:last-child {
+					border-bottom: none;
+				}
+				
+				a {
+					padding: 10px 8px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.primary {
+		margin-top: 10px;
+		
+		.menu {
+			text-align: center;
+			
+			& > li {
+				display: inline-block;
+				float: none;
+			}
+		}
+	}
+}
+
+/* Content */
+.body {
+	padding: 30px 0;
+}
+
+.content {
+	font-size: 16px;
+	
+	@import "content.less";
+
+	@import "contentmobile.less";
+}
+
+/* Blog */
+.blog-post-wrapper {
+	margin-bottom: 30px;
+	.clearfix;
+	
+	.byline {
+		margin-bottom: 1em;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 1.2;
+		
+		a {
+			text-decoration: underline;
+		}
+	}
+	
+	.blog-post-image {
+		float: left;
+		margin-right: 50px;
+	}
+	
+	.blog-post-name {
+		a {
+			text-decoration: none;
+		}
+	}
+	
+	.blog-post-content {
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 700px) {
+	.blog-post-wrapper {
+		.blog-post-image {
+			float: none;
+			text-align: center;
+			
+			img {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+/* Footer */
+.footer {
+	padding: 30px 0;
+	background: @dark;
+	color: @light;
+	text-align: center;
+
+	a {
+		color: @light;
+		
+		&:hover {
+			color: @c2;
+		}
+	}
+
+	.container {
+		position: relative;
+	}
+	
+	.footer-top {
+		.clearfix;
+	}
+	
+	.footer-content {
+		p {
+			color: @light;			
+		}
+	}
+	
+	.utility .menu {
+		text-align: center;
+
+		li {
+			position: relative;
+			display: inline-block;
+			padding: 0 15px;
+			z-index: 70;
+			
+			a {
+				display: inline-block;
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+		}
+	}
+}
+
+/* Social */
+.social {
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	
+	.menu a {
+		width: 1.1em;
+		height: 1.1em;
+		opacity: .8;
+		font-size: 40px;
+		color: @light;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.social {
+		position: static;
+		left: auto;
+		bottom: auto;
+		.clearfix;
+	}
+}
