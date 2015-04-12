@@ -83,6 +83,29 @@ img {
   margin-left: 0;
   white-space: nowrap;
 }
+/* Blog */
+.blog-posts .blog-post:first-child {
+  padding-top: 0;
+}
+.blog-posts .blog-post:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.single .blog-post {
+  border-bottom: none;
+}
+.pagination {
+  margin-top: 1em;
+}
+/* Text meant only for screen readers */
+.says,
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
 /* Colors */
 /* Fonts */
 .sans {
@@ -154,7 +177,7 @@ h1 + h3 {
   margin-top: -2em;
 }
 h2 + h3 {
-  margin-top: -0.8em;
+  margin-top: -1em;
 }
 p.button a {
   display: inline-block;

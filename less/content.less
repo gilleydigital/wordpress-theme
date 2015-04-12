@@ -49,8 +49,16 @@ h2 {
 
 h3 {
 	padding-left: 1px;
-	margin-top: -0.8em;
 	font-size: 0.8em;
+}
+
+// h3 is a subheader, it should snuggle up under the header above
+h1 + h3 {
+	margin-top: -2em;
+}
+
+h2 + h3 {
+	margin-top: -1em;
 }
 
 p.button {

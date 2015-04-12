@@ -2,36 +2,60 @@
 
 <?php get_header(); ?>
 		
-<div class="body-content content container">
-	<?php
-		if (have_posts()):
-			while (have_posts()): 
-				the_post();
-				get_template_part('content', $post->post_type);
-			endwhile;
-		endif;
-	?>
+<div class="container">
+	<div class="body-content content">
+		<?php
+			if (have_posts()):
+				while (have_posts()): 
+					the_post();
+					get_template_part('content', $post->post_type);
+				endwhile;
+			endif;
+			
+			wp_reset_postdata();
+		?>
 
-	<?php
-		$args = array(
-			'post_type' => 'post',
-			'nopaging' => true
-		);
+		<div class="blog-posts">
+			<?php
+				$args = array(
+					'post_type' => 'post',
+					'posts_per_page' => 5
+				);
 
-		// The Query
-		$the_query = new WP_Query( $args );
+				$args['paged'] = get_query_var( 'paged' ) 
+				    ? get_query_var( 'paged' ) 
+				    : 1;
 
-		// The Loop
-		if ( $the_query->have_posts() ) {
-			while ( $the_query->have_posts() ) {
-				$the_query->the_post();
-				get_template_part('parts/blog/post');
-			}
-		}
+				// The Query
+				$the_query = new WP_Query( $args );
+								
+				// Pagination fix
+				$temp_query = $wp_query;
+				$wp_query   = NULL;
+				$wp_query   = $the_query;
 
-		// Reset Posts
-		wp_reset_postdata();
-	?>
+				// The Loop
+				if ( $the_query->have_posts() ) {
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						get_template_part('parts/blog/post');
+					}
+					
+					the_posts_pagination();
+				}
+				else {
+					get_template_part('content', 'none');
+				}
+				
+				// Reset Posts
+				wp_reset_postdata();
+				
+				// Reset main query object
+				$wp_query = NULL;
+				$wp_query = $temp_query;
+			?>
+		</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>

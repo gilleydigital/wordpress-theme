@@ -1,6 +1,6 @@
 @import "includes/lib/normalize.less";
 
-@import "includes/lib/grid.less";
+@import "includes/lib/bootstrap.less";
 
 @import "settings.less";
 
@@ -80,7 +80,7 @@
 }
 
 /* Content */
-.body {
+.body-content {
 	padding: 30px 0;
 }
 
@@ -93,8 +93,27 @@
 }
 
 /* Blog */
-.blog-post-wrapper {
-	margin-bottom: 30px;
+.back-to-blog {
+	position: relative;
+	
+	a {
+		color: @c1;
+		text-decoration: none;
+	}
+	
+	&:hover a {
+		color: @c2;
+	}
+	
+	.back-to-blog-text {
+		.sans;
+	}
+
+}
+
+.blog-post {
+	padding: 25px 0;
+	border-bottom: 1px solid @darkgrey;
 	.clearfix;
 	
 	.byline {
@@ -125,9 +144,10 @@
 }
 
 @media (max-width: 700px) {
-	.blog-post-wrapper {
+	.blog-post {
 		.blog-post-image {
 			float: none;
+			margin-right: 0;
 			text-align: center;
 			
 			img {
@@ -188,7 +208,7 @@
 .social {
 	.menu a {
 		width: 1.1em;
-		height: 1.1em;
+		height: 1.2em;
 		opacity: .8;
 		font-size: 40px;
 		color: @light;
