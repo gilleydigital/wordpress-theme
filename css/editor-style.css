@@ -1,4 +1,7 @@
 /* Universal */
+body {
+  font-family: Helvetica, sans-serif;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -254,6 +257,9 @@ p.button a::-moz-selection {
 .alignright {
   float: right;
   margin-left: 2%;
+}
+.wp-caption {
+  max-width: 100%;
 }
 .wp-caption-text {
   padding-left: 2px;
