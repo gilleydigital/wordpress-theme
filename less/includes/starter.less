@@ -28,6 +28,12 @@ img[class*="wp-image-"] {
     height: auto;
 }
 
+p,
+h1, h2, h3, h4, h5, h6,
+ul li, ol li {
+	line-height: 1;
+}
+
 /* Reusable */
 .broken-hr {
 	width: 100%;
@@ -69,6 +75,10 @@ img[class*="wp-image-"] {
 		background: @c2;
 		color: @light;
 	}
+}
+
+.big-link {
+	cursor: pointer;
 }
 
 /* Navigation */
@@ -127,6 +137,35 @@ img[class*="wp-image-"] {
 
 .pagination {
 	margin-top: 1em;
+}
+
+/* Search Form */
+.search-form {
+	position: relative;
+	display: inline-block;
+	
+	.search-form-field {
+		color: @dark;
+		padding: 3px 5px 3px 25px;
+		font-size: 0.8em;
+	}
+	
+	.search-form-icon {
+		position: absolute;
+		left: 5px;
+		top: 6px;
+		color: @dark;	
+	}
+	
+	.search-form-button {
+		position: absolute;
+		left: 5px;
+		top: 6px;
+		width: 16px;
+		height: 19px;
+		background: transparent;
+		border: none;
+	}
 }
 
 /* Text meant only for screen readers */

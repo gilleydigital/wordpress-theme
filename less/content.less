@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 1em;
 	margin-bottom: 0.5em;
 	color: @c1;
+	.serif;
 	
 	&:first-child {
 		margin-top: 0;
@@ -20,6 +21,7 @@ p {
 	line-height: 1.8;
 	font-size: 1em;
 	color: @dark;
+	.sans;
 	
 	&:first-child {
 		margin-top: 0;
@@ -54,11 +56,11 @@ h3 {
 
 // h3 is a subheader, it should snuggle up under the header above
 h1 + h3 {
-	margin-top: -2em;
+	margin-top: -1.4em;
 }
 
 h2 + h3 {
-	margin-top: -1em;
+	margin-top: -0.8em;
 }
 
 p.button {
@@ -74,12 +76,15 @@ ul, ol {
 	li {
 		margin-top: 0.25em;
 		margin-bottom: 0.25em;
+		font-size: 1em;
+		color: @dark;
+		.sans;
 	}
 }
 
 ul {
 	li {
-		list-style-type: disc;		
+		list-style-type: disc;
 	}
 }
 
@@ -129,6 +134,7 @@ p, ul, ol, blockquote, table, p.button a {
 	color: @darkgrey;
 	font-size: 0.8em;
 	line-height: 1.2;
+	text-align: center;
 }
 
 /* Block Quotes */
@@ -156,6 +162,7 @@ blockquote p {
 /* Tables */
 table {
 	border-collapse: collapse;
+	margin-bottom: 1em;
 	
 	tr:nth-child(even) {
 		background: @lightgrey;
@@ -184,8 +191,9 @@ table {
 		margin-bottom: 0.5em;
 	}
 	
-	.gfield_label {
+	.gfield_label, .top_label .gfield_label {
 		color: @dark;
+		font-weight: normal;
 		.sans;
 	}
 	

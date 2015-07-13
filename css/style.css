@@ -2187,6 +2187,21 @@ ul {
 img {
   max-width: 100%;
 }
+img[class*="align"],
+img[class*="wp-image-"] {
+  height: auto;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul li,
+ol li {
+  line-height: 1;
+}
 /* Reusable */
 .broken-hr {
   width: 100%;
@@ -2221,6 +2236,9 @@ img {
 .button-style:hover {
   background: #226661;
   color: #eaeaea;
+}
+.big-link {
+  cursor: pointer;
 }
 /* Navigation */
 .primary {
@@ -2265,6 +2283,31 @@ img {
 }
 .pagination {
   margin-top: 1em;
+}
+/* Search Form */
+.search-form {
+  position: relative;
+  display: inline-block;
+}
+.search-form .search-form-field {
+  color: #222222;
+  padding: 3px 5px 3px 25px;
+  font-size: 0.8em;
+}
+.search-form .search-form-icon {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  color: #222222;
+}
+.search-form .search-form-button {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  width: 16px;
+  height: 19px;
+  background: transparent;
+  border: none;
 }
 /* Text meant only for screen readers */
 .says,
@@ -2427,6 +2470,7 @@ img {
   margin-top: 1em;
   margin-bottom: 0.5em;
   color: #462d72;
+  font-family: Georgia, serif;
 }
 .content h1:first-child,
 .content h2:first-child,
@@ -2450,6 +2494,7 @@ img {
   line-height: 1.8;
   font-size: 1em;
   color: #222222;
+  font-family: Helvetica, sans-serif;
 }
 .content p:first-child {
   margin-top: 0;
@@ -2475,10 +2520,10 @@ img {
   font-size: 0.8em;
 }
 .content h1 + h3 {
-  margin-top: -2em;
+  margin-top: -1.4em;
 }
 .content h2 + h3 {
-  margin-top: -1em;
+  margin-top: -0.8em;
 }
 .content p.button a {
   display: inline-block;
@@ -2503,6 +2548,9 @@ img {
 .content ol li {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
+  font-size: 1em;
+  color: #222222;
+  font-family: Helvetica, sans-serif;
 }
 .content ul li {
   list-style-type: disc;
@@ -2565,6 +2613,7 @@ img {
   color: #a5a5a5;
   font-size: 0.8em;
   line-height: 1.2;
+  text-align: center;
 }
 .content blockquote {
   background: #efefef;
@@ -2586,6 +2635,7 @@ img {
 }
 .content table {
   border-collapse: collapse;
+  margin-bottom: 1em;
 }
 .content table tr:nth-child(even) {
   background: #efefef;
@@ -2606,8 +2656,10 @@ img {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-.content .gform_wrapper .gfield_label {
+.content .gform_wrapper .gfield_label,
+.content .gform_wrapper .top_label .gfield_label {
   color: #222222;
+  font-weight: normal;
   font-family: Helvetica, sans-serif;
 }
 .content .gform_wrapper .gform_footer input.button,
@@ -2718,8 +2770,8 @@ img {
 }
 /* Social */
 .social .menu a {
-  width: 1.1em;
-  height: 1.2em;
+  width: 1em;
+  height: 1em;
   opacity: .8;
   font-size: 40px;
   color: #eaeaea;
