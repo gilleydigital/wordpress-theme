@@ -2,8 +2,6 @@
 
 <div class="container">
 	<div class="body-content content">
-		<?php get_template_part('parts/blog/back'); ?>
-
 		<h1><?php get_template_part('parts/viewing'); ?></h1>
 
 		<div class="blog-posts">
