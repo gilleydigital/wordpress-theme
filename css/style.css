@@ -2387,9 +2387,6 @@ ol li {
   padding: 15px 0;
   color: #eaeaea;
 }
-.header a {
-  color: #eaeaea;
-}
 .header a:hover {
   color: #226661;
 }
@@ -2491,16 +2488,20 @@ ol li {
 .content p {
   margin-top: 0;
   margin-bottom: 1em;
-  line-height: 1.8;
-  font-size: 1em;
-  color: #222222;
-  font-family: Helvetica, sans-serif;
 }
 .content p:first-child {
   margin-top: 0;
 }
 .content p:last-child {
   margin-bottom: 0;
+}
+.content p,
+.content ul li,
+.content ol li {
+  line-height: 1.8;
+  font-size: 1em;
+  color: #222222;
+  font-family: Helvetica, sans-serif;
 }
 .content a {
   text-decoration: underline;

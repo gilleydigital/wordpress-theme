@@ -193,16 +193,20 @@ h6:last-child {
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  line-height: 1.8;
-  font-size: 1em;
-  color: #222222;
-  font-family: Helvetica, sans-serif;
 }
 p:first-child {
   margin-top: 0;
 }
 p:last-child {
   margin-bottom: 0;
+}
+p,
+ul li,
+ol li {
+  line-height: 1.8;
+  font-size: 1em;
+  color: #222222;
+  font-family: Helvetica, sans-serif;
 }
 a {
   text-decoration: underline;
