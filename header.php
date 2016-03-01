@@ -10,6 +10,7 @@
 <body <?php body_class(); ?>>
 	<?php get_template_part('parts/menus/mobile'); ?>
 	<div class="header">
+	    <div id="mobile-toggle" class="mobile-toggle"><i class="fa fa-bars"></i></div>
 		<div class="container">
 			<a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo theme_root(); ?>/img/logo.png"></a>
 			<?php get_template_part('parts/menus/primary'); ?>
