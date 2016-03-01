@@ -68,13 +68,10 @@
 		global $wp_styles;
 		$theme = get_theme(get_current_theme());
 
-		wp_register_style('bootstrap-styles', get_template_directory_uri().'/css/bootstrap.min.css', false, $theme['Version']);
-		wp_enqueue_style('bootstrap-styles');
-
 		wp_register_style('google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700', $theme['Version']);
 		wp_enqueue_style('google-fonts');
 
-		wp_register_style('theme-styles', get_template_directory_uri().'/css/style.css', array('bootstrap-styles'), $theme['Version']);
+		wp_register_style('theme-styles', get_template_directory_uri().'/css/style.css', false, $theme['Version']);
 		wp_enqueue_style('theme-styles');
 	}
 	add_action('wp_enqueue_scripts', 'action_wp_enqueue_styles');
@@ -97,7 +94,7 @@
 	// Formats menu
 	function my_mce_before_init_insert_formats( $init_array ) {  
 		$style_formats = array(  
-			array(  
+			array(
 				'title' => 'Big Header',  
 				'block' => 'h1'
 			),
