@@ -81,13 +81,18 @@ function my_theme_register_required_plugins() {
 			'required' => true
 		),
 		array(
-			'name' => 'Google Analytics',
-			'slug' => 'google-analytics-dashboard-for-wp',
+			'name' => 'Regenerate Thumbnails',
+			'slug' => 'regenerate-thumbnails',
 			'required' => true
 		),
 		array(
-			'name' => 'Busted',
-			'slug' => 'busted',
+			'name' => 'Wordfence Security',
+			'slug' => 'wordfence',
+			'required' => true
+		),
+		array(
+			'name' => 'Google Analytics',
+			'slug' => 'google-analytics-dashboard-for-wp',
 			'required' => true
 		),
 		array(
@@ -109,7 +114,22 @@ function my_theme_register_required_plugins() {
 			'name' => '301 Redirects',
 			'slug' => 'simple-301-redirects',
 			'required' => false
-		)
+		),
+		array(
+			'name' => 'Show Current Template',
+			'slug' => 'show-current-template',
+			'required' => true
+		),
+		array(
+			'name' => 'WP Super Cache',
+			'slug' => 'wp-super-cache',
+			'required' => false
+		),
+		array(
+			'name' => 'WP Super Cache - Clear all cache',
+			'slug' => 'wp-super-cache-clear-cache-menu',
+			'required' => false
+		),
     );
 
     /**
