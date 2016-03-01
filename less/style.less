@@ -2,6 +2,8 @@
 
 @import "includes/lib/bootstrap.less";
 
+@import "includes/lib/fontawesome.less";
+
 @import "settings.less";
 
 @import "includes/social.less";
@@ -25,37 +27,37 @@
 	.logo {
 		float: left;
 	}
-}
-
-.primary {
-	margin-top: 42px;
 	
-	.menu {
-		& > li {
-			margin-left: 15px;
-			
-			a {
-				padding-top: 8px;
-				padding-bottom: 8px;
-			}
-		}
-		
-		.sub-menu, .children {
-			background: @c1;
-			margin-left: -8px;
-			border-color: @dark;
-			border-width: 1px;
-			border-style: solid;
-			
-			li {
-				border-bottom: 1px solid @dark;
-				
-				&:last-child {
-					border-bottom: none;
-				}
-				
+	.primary {
+		margin-top: 42px;
+
+		.menu {
+			& > li {
+				margin-left: 15px;
+
 				a {
-					padding: 10px 8px;
+					padding-top: 8px;
+					padding-bottom: 8px;
+				}
+			}
+
+			.sub-menu, .children {
+				background: @c1;
+				margin-left: -8px;
+				border-color: @dark;
+				border-width: 1px;
+				border-style: solid;
+
+				li {
+					border-bottom: 1px solid @dark;
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					a {
+						padding: 10px 8px;
+					}
 				}
 			}
 		}
@@ -63,17 +65,19 @@
 }
 
 @media (max-width: 1000px) {
-	.primary {
-		margin-top: 10px;
-		
-		.menu {
-			text-align: center;
-			
-			& > li {
-				display: inline-block;
-				float: none;
+	.header {
+		.primary {
+			margin-top: 10px;
+
+			.menu {
+				text-align: center;
+
+				& > li {
+					display: inline-block;
+					float: none;
+				}
 			}
-		}
+		}		
 	}
 }
 
@@ -210,6 +214,7 @@
 		opacity: .8;
 		font-size: 40px;
 		color: @light;
+		line-height: 1;
 
 		&:hover {
 			opacity: 1;

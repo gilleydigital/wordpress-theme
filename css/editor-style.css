@@ -75,31 +75,31 @@ ol li {
   cursor: pointer;
 }
 /* Navigation */
-.primary {
+.header .primary {
   float: right;
 }
-.primary .menu > li {
+.header .primary .menu > li {
   float: left;
 }
-.primary .menu > li:first-child {
+.header .primary .menu > li:first-child {
   margin-left: 0;
 }
-.primary .menu a {
+.header .primary .menu a {
   position: relative;
   display: inline-block;
 }
-.primary .menu li:hover .sub-menu,
-.primary .menu li:hover .children {
+.header .primary .menu li:hover .sub-menu,
+.header .primary .menu li:hover .children {
   display: block;
 }
-.primary .menu .sub-menu,
-.primary .menu .children {
+.header .primary .menu .sub-menu,
+.header .primary .menu .children {
   display: none;
   position: absolute;
   z-index: 90;
 }
-.primary .menu .sub-menu li,
-.primary .menu .children li {
+.header .primary .menu .sub-menu li,
+.header .primary .menu .children li {
   float: none;
   margin-left: 0;
   white-space: nowrap;

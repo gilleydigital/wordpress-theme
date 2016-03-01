@@ -82,38 +82,40 @@ ul li, ol li {
 }
 
 /* Navigation */
-.primary {
-	float: right;
-	
-	.menu {
-		& > li {
-			float: left;
+.header {
+	.primary {
+		float: right;
 
-			&:first-child {
-				margin-left: 0;
+		.menu {
+			& > li {
+				float: left;
+
+				&:first-child {
+					margin-left: 0;
+				}
 			}
-		}
 
-		a {
-			position: relative;
-			display: inline-block;
-		}
-		
-		li:hover {
+			a {
+				position: relative;
+				display: inline-block;
+			}
+
+			li:hover {
+				.sub-menu, .children {
+					display: block;
+				}
+			}
+
 			.sub-menu, .children {
-				display: block;
-			}
-		}
-		
-		.sub-menu, .children {
-			display: none;
-			position: absolute;
-			z-index: 90;
-			
-			li {
-				float: none;
-				margin-left: 0;
-				white-space: nowrap;
+				display: none;
+				position: absolute;
+				z-index: 90;
+
+				li {
+					float: none;
+					margin-left: 0;
+					white-space: nowrap;
+				}
 			}
 		}
 	}
