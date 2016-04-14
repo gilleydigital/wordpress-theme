@@ -3282,9 +3282,6 @@ ul {
 }
 img {
   max-width: 100%;
-}
-img[class*="align"],
-img[class*="wp-image-"] {
   height: auto;
 }
 p,
@@ -3723,6 +3720,13 @@ ol li {
 .content table::-moz-selection,
 .content p.button a::-moz-selection {
   background: rgba(70, 45, 114, 0.6);
+}
+.content hr {
+  margin-top: 0;
+  margin-bottom: 1em;
+  height: 1px;
+  background: #462d72;
+  border: none;
 }
 .content .alignright,
 .content .alignleft,
