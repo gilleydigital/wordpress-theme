@@ -50,25 +50,19 @@ function my_theme_register_required_plugins() {
 		array(
 			'name' => 'Advanced Custom Fields Pro [b3JkZXJfaWQ9NDEwODB8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTEwLTAxIDE3OjI0OjU5]',
 			'slug' => 'advanced-custom-fields-pro',
-			'source' => $plugins_folder . 'advanced-custom-fields-pro.zip',
+			'source' => $plugins_folder . '/advanced-custom-fields-pro.zip',
 			'required' => true
 		),
 		array(
 			'name' => 'Advanced Custom Fields Flexible Content [FC9O-H6VN-E4CL-LT33]',
 			'slug' => 'acf-flexible-content',
-			'source' => $plugins_folder . 'acf-flexible-content.zip',
+			'source' => $plugins_folder . '/acf-flexible-content.zip',
 			'required' => false
-		),
-		array(
-			'name' => 'Advanced Custom Fields Options Page [OPN8-FA4J-Y2LW-81LS]',
-			'slug' => 'acf-options-page',
-			'source' => $plugins_folder . 'acf-options-page.zip',
-			'required' => true
 		),
 		array(
 			'name' => 'Advanced Custom Fields Gallery [GF72-8ME6-JS15-3PZC]',
 			'slug' => 'acf-gallery',
-			'source' => $plugins_folder . 'acf-gallery.zip',
+			'source' => $plugins_folder . '/acf-gallery.zip',
 			'required' => false
 		),
 		array(
