@@ -90,7 +90,7 @@ function my_theme_register_required_plugins() {
 		array(
 			'name' => 'Wordfence Security',
 			'slug' => 'wordfence',
-			'required' => true
+			'required' => false
 		),
 		array(
 			'name' => 'Google Analytics',
