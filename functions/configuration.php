@@ -13,6 +13,10 @@
 	}
 
 	/*** Actions ***/
+	if (function_exists('acf_add_options_page')) {
+		acf_add_options_page();
+	}
+	
 	function action_after_setup_theme(){
 		// Theme features
 		add_theme_support('post-thumbnails');
