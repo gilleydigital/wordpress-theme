@@ -1,0 +1,31 @@
+@import "includes/lib/normalize";
+
+@import "includes/lib/bootstrap";
+
+@import "includes/lib/fontawesome";
+
+@import "settings";
+
+@import "includes/social";
+
+@import "includes/starter";
+
+@import "includes/mobile";
+
+.content {
+	@import "content";
+}
+
+html {
+	font-size: 0.069444vw;
+}
+
+body {
+	font-size: 16rem;
+}
+
+@media (max-width: 1200px) {
+	html {
+		font-size: 0.833328px;
+	}
+}

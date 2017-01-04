@@ -3,6 +3,6 @@
 		'theme_location' => 'social',
 		'depth' => 1,
 		'container' => 'div',
-		'container_class' => 'social'
+		'container_class' => 'social-menu'
 	));
 ?>

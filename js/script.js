@@ -27,7 +27,7 @@ jQuery(function($){
 	});
 	
 	// Whole area clickable
-	$(".big-link").click(function() {
+	$(".biglink").click(function() {
 		window.location = $(this).find("a").attr("href");
 		return false;
 	});

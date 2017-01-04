@@ -1,21 +1,8 @@
 <?php
-	// Helper Functions
-	function custom_read_more() {
-	    return '...';
-	}
-
-	function excerpt($limit) {
-	    return wp_trim_words(get_the_excerpt(), $limit, custom_read_more());
-	}
-	
-	function theme_root() {
-		return get_stylesheet_directory_uri();
-	}
-
-	/*** Actions ***/
 	if (function_exists('acf_add_options_page')) {
 		acf_add_options_page();
 	}
+	
 	
 	function action_after_setup_theme(){
 		// Theme features
@@ -25,7 +12,6 @@
 		// add_image_size('home-splash', 1200, 600, false);
 	}
 	add_action('after_setup_theme', 'action_after_setup_theme');
-
 
 
 	function action_init(){
@@ -38,33 +24,7 @@
 		add_editor_style('css/editor-style.css');
 	}
 	add_action('init', 'action_init');
-
-
-
-	function action_widgets_init() {
-	    register_sidebar( array(
-	        'name' => 'Main Sidebar',
-	        'id' => 'sidebar-main',
-	        'description' => 'Widgets in this area will be shown on pages.',
-	        'before_widget' => '<div id="%1$s" class="widget content %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-	    ) );
-
-	    register_sidebar( array(
-	        'name' => 'Blog Sidebar',
-	        'id' => 'sidebar-blog',
-	        'description' => 'Widgets in this area will be shown on posts and in the blog.',
-	        'before_widget' => '<div id="%1$s" class="widget content %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-	    ) );
-	}
-	add_action( 'widgets_init', 'action_widgets_init' );
-
-
+	
 
 	function action_wp_enqueue_styles(){
 		if (is_admin()) return;
@@ -81,7 +41,6 @@
 	add_action('wp_enqueue_scripts', 'action_wp_enqueue_styles');
 
 
-
 	function action_wp_enqueue_scripts(){
 		if (is_admin()) return;
 
@@ -94,6 +53,7 @@
 		wp_enqueue_script('theme-script');
 	}
 	add_action('wp_enqueue_scripts', 'action_wp_enqueue_scripts');
+	
 	
 	// Formats menu
 	function my_mce_before_init_insert_formats( $init_array ) {  
@@ -123,4 +83,19 @@
 		return $init_array;
 	}
 	add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+	
+	
+/*
+	function action_widgets_init() {
+		    register_sidebar( array(
+		        'name' => 'Sidebar',
+		        'id' => 'sidebar',
+		        'before_widget' => '<div id="%1$s" class="widget content %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+		    ) );
+	}
+	add_action( 'widgets_init', 'action_widgets_init' );
+*/
 ?>

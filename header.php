@@ -10,10 +10,18 @@
 <body <?php body_class(); ?>>
 	<?php get_template_part('parts/menus/mobile'); ?>
 	<div class="header">
-	    <div id="mobile-toggle" class="mobile-toggle"><i class="fa fa-bars"></i></div>
+	    <div id="mobile-toggle" class="mobile-toggle">
+			<i class="fa fa-bars"></i>
+		</div>
 		<div class="container">
 			<a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo theme_root(); ?>/img/logo.png"></a>
-			<?php get_template_part('parts/menus/primary'); ?>
+			<?php 
+				wp_nav_menu(array(
+					'theme_location' => 'primary',
+					'depth' => 2,
+					'container' => 'div',
+					'container_class' => 'primary-menu'
+				));
+			?>
 		</div>
 	</div>
-	<div class="body">

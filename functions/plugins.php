@@ -132,6 +132,11 @@ function my_theme_register_required_plugins() {
 			'slug' => 'wp-super-cache-clear-cache-menu',
 			'required' => false
 		),
+		array(
+			'name' => 'Simple Lightbox',
+			'slug' => 'simple-lightbox',
+			'required' => true
+		),
     );
 
     /**
